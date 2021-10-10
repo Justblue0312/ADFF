@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/imgAvatar"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ic_baseline_person_24"
+                        app:civ_border_color="#3f51b5"
+                        app:civ_border_width="4dp"
+                        app:civ_shadow="true"
+                        app:civ_shadow_radius="10dp"
+                        app:civ_shadow_color="#3f51b5"/>
+
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pham Thanh Tung"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:layout_margin="16dp"/>
+
+                    <ImageButton
+                        android:id="@+id/btnEditProfile"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="4dp"
+                        android:src="@drawable/ic_baseline_edit_24"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_mail_24"
+                android:gravity="right|center_vertical"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:text="abs@gmail.com"
+                android:textColor="#000"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                android:gravity="right|center_vertical"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:text="Ha Dong, Ha Noi"
+                android:textColor="#000"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giới thiệu:"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/txtShortIntro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="top"
+                android:inputType="text|textMultiLine"
+                android:minHeight="48dp"
+                android:text="ABC"
+                android:textSize="20sp"
+                android:enabled="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thông tin chung:"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/txtBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="top"
+                android:inputType="text|textMultiLine"
+                android:minHeight="48dp"
+                android:text="ABC"
+                android:textSize="20sp"
+                android:enabled="false"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
