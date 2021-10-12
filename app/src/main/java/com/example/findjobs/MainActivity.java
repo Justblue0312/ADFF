@@ -10,6 +10,7 @@ import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.Model.Student;
 import com.mikhaellopez.circularimageview.CircularImageView;
 
 
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText edtSearchJobs;
     private CircularImageView imgAvatar;
-    private TextView txtName,txtEmail, txtLocation, txtShortIntro,txtBio;
+    private TextView txtName,txtEmail, txtLocation, txtShortIntro,txtBio, textView;
     private ImageButton btnEditProfile;
 
     private RecyclerView rvJobs,rvAppliedJobs,rvApprovedJobs;
@@ -30,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
         
         addControls();
         addEvents();
+
+        Bundle bundleRecieve = getIntent().getExtras();
+        if (bundleRecieve != null){
+            Student student = (Student) bundleRecieve.get("object_student");
+            if (student != null){
+                textView.setText(student.toString());
+            }
+        }
     }
 
     private void addControls(){
@@ -72,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
         txtLocation = findViewById(R.id.txtLocation);
         txtShortIntro = findViewById(R.id.txtShortIntro);
         txtBio = findViewById(R.id.txtBio);
+
+        textView = findViewById(R.id.textView);
 
         rvJobs = findViewById(R.id.rvJobs);
         rvAppliedJobs = findViewById(R.id.rvAppliedJobs);
