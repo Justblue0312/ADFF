@@ -17,7 +17,20 @@ public class Student implements Serializable {
     private String social_youtube;
     private String social_website;
     private String id;
-    private String token;
+
+    public Student(int user, String email, String username, String location, String short_intro, String bio, String social_github, String social_twitter, String social_linkedin, String social_youtube, String social_website) {
+        this.user = user;
+        this.email = email;
+        this.username = username;
+        this.location = location;
+        this.short_intro = short_intro;
+        this.bio = bio;
+        this.social_github = social_github;
+        this.social_twitter = social_twitter;
+        this.social_linkedin = social_linkedin;
+        this.social_youtube = social_youtube;
+        this.social_website = social_website;
+    }
 
     public int getUser() {
         return user;
@@ -123,14 +136,6 @@ public class Student implements Serializable {
         this.id = id;
     }
 
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
-
     @Override
     public String toString() {
         return "Student{" +
@@ -147,7 +152,6 @@ public class Student implements Serializable {
                 ", social_youtube='" + social_youtube + '\'' +
                 ", social_website='" + social_website + '\'' +
                 ", id='" + id + '\'' +
-                ", token='" + token + '\'' +
                 '}';
     }
 }

@@ -1,6 +1,7 @@
 package com.example.findjobs;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -11,10 +12,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.API.Const;
 import com.example.API.StudentApiService;
 import com.example.API.UserClient;
+import com.example.Model.Job;
 import com.example.Model.Login;
 import com.example.Model.Student;
+import com.example.findjobs.Fragment.JobFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +31,7 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private TextView edtUsername, edtPassword, edtRegister;
+    private TextView edtUsername, edtPassword, edtRegister, textView;
     private Button btnLogin;
 
     private ProgressDialog progressDialog;
@@ -48,6 +52,8 @@ public class LoginActivity extends AppCompatActivity {
         edtRegister = findViewById(R.id.edtRegister);
         btnLogin = findViewById(R.id.btnLogin);
 
+        textView = findViewById(R.id.textView);
+
         mListStudent = new ArrayList<>();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -65,23 +71,9 @@ public class LoginActivity extends AppCompatActivity {
         });
         
         getListStudent();
-
     }
 
-    private void getListStudent() {
-        StudentApiService.studentApiService.getListStudents().enqueue(new Callback<Student>() {
-            @Override
-            public void onResponse(Call<Student> call, Response<Student> response) {
-                mListStudent = (List<Student>) response.body();
-                Log.e("List Students", mListStudent.size()+"");
-            }
 
-            @Override
-            public void onFailure(Call<Student> call, Throwable t) {
-                Log.e("List Students", "Failed to load");
-            }
-        });
-    }
 
     private void loginAccount() {
         progressDialog.show();
@@ -95,6 +87,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         if(username == null || password == null){
+            progressDialog.dismiss();
             Toast.makeText(LoginActivity.this, "Please enter the fields", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -102,6 +95,7 @@ public class LoginActivity extends AppCompatActivity {
         for(Student student: mListStudent){
             if (username.equals(student.getUsername())){
                 isHasStudent = true;
+                Const.LOGINUSER = student.getUsername();
                 mStudent = student;
                 break;
             }
@@ -122,7 +116,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 Bundle bundle = new Bundle();
-                                bundle.putSerializable("object_student", mStudent);
+                                bundle.putSerializable("key_1", mStudent);
                                 intent.putExtras(bundle);
                                 startActivity(intent);
                             }
@@ -135,9 +129,25 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     });
         }else {
+            progressDialog.dismiss();
             Toast.makeText(LoginActivity.this, "Username or password invalid", Toast.LENGTH_SHORT).show();
         }
 
 
+    }
+
+    private void getListStudent() {
+        StudentApiService.studentApiService.getListStudents().enqueue(new Callback<List<Student>>() {
+            @Override
+            public void onResponse(Call<List<Student>> call, Response<List<Student>> response) {
+                mListStudent = response.body();
+                Log.e("List Students", mListStudent.size()+"");
+            }
+
+            @Override
+            public void onFailure(Call<List<Student>> call, Throwable t) {
+                Log.e("List Students", "Failed to load");
+            }
+        });
     }
 }

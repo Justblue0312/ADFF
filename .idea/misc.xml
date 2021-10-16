@@ -5,17 +5,31 @@
       <map>
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/drawable/custom_rectangle.xml" value="0.2703125" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/drawable/edittext_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/drawable/ic_baseline_account_balance_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2703125" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.2703125" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/drawable/ic_baseline_mail_24.xml" value="0.2703125" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/drawable/my_border.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/activity_applied_detail_job.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/activity_edit_profile.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/activity_job_detail.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/activity_login_activity.xml" value="0.264" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/activity_login_acyivity.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/applied_jobs_item.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/fragment_approval.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/fragment_jobs.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/fragment_storage.xml" value="0.26510416666666664" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/joblist_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/rowitem.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/tab_jobs.xml" value="0.264" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/tabs_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/layout/tabs_storage.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FindJobs/app/src/main/res/menu/navigation.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

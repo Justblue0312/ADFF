@@ -23,7 +23,7 @@
         android:layout_marginTop="52dp"
         android:text="ĐĂNG NHẬP"
         android:textColor="@color/purple_200"
-        android:textSize="36dp"
+        android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -65,9 +65,10 @@
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/edittext_background"
-        android:drawableLeft="@drawable/ic_baseline_mail_24"
+        android:drawableStart="@drawable/ic_baseline_mail_24"
         android:inputType="text"
-        android:paddingLeft="15dp"
+        android:text="Peter"
+        android:paddingStart="15dp"
         android:hint="abc123456"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,15 +95,16 @@
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/edittext_background"
-        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
         android:inputType="textPassword"
-        android:paddingLeft="15dp"
+        android:paddingStart="15dp"
         android:hint="*******"
+        android:text="29091999trao*"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="RtlSymmetry,SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/edtRegister"
@@ -117,7 +119,9 @@
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        android:enabled="false"
+        android:focusable="true" />
 
 
     <Button
@@ -132,4 +136,6 @@
         app:layout_constraintTop_toBottomOf="@+id/edtPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
